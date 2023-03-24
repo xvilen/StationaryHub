@@ -7,50 +7,21 @@
 
  <script src="/javascripts/fontawesome.js"></script>
 
-    <link rel="stylesheet" href="/stylesheets/Login.css" />
-    <link rel="stylesheet" href="/stylesheets/navbar.css" />
-    <link rel="stylesheet" href="/stylesheets/backside.css" />
-    <link rel="stylesheet" href="/stylesheets/universal.css" />
+    <link rel="stylesheet" href="stylesheets/Login.css" />
+    <link rel="stylesheet" href="stylesheets/navbar.css" />
+    <link rel="stylesheet" href="stylesheets/backside.css" />
+    <link rel="stylesheet" href="stylesheets/universal.css" />
 <title>Login Page</title>
-<%@includes file="includes/head.jsp" %>
+<%--  <%@include  file="/includes/head.jsp" %>  --%>
 </head>
 <body>
  <i class="on-off fa-solid fa-toggle-off"></i>
     <div class="container">
-      <nav>
-        <div class="navLeft">
-          <div class="icon"><i class="fa-solid fa-bars"></i></div>
-          <h2>
-            <a href="/">YOUR CHOICE </a>
-          </h2>
-        </div>
-        <div class="navMid">
-          <a href="/">
-            <div class="navitem">Home</div>
-          </a>
-          <a href="/product">
-            <div class="navitem">Shop</div>
-          </a>
-          <a href="">
-            <div class="navitem">Blog</div>
-          </a>
-          <a href="">
-            <div class="navitem">Contact</div>
-          </a>
-        </div>
-        <div class="navRight">
-          <div class="cart">
-            <div class="icon">
-              <i class="fa-solid nav-ic fa-bag-shopping"></i>
-            </div>
-          </div>
-        </div>
-      </nav>
       <div class="Landing-Screen">
         <div class="Backside-card-body">
           <div class="Backside-card">
             <div class="Backside-card-Left cursor">
-              <h5 id="pagelocation">YOUR CHOICE</h5>
+              <h5 id="pagelocation">THE STATIONARY HUB</h5>
             </div>
             <div class="Backside-card-Mid cursor">
               <h1>LOGIN</h1>
@@ -108,6 +79,9 @@
         </div>
       </div>
     </div>
+    
+    <%--  --%>
+    
     <script>
       let login = document.querySelector(".login");
       let signup = document.querySelector(".signup");
@@ -125,11 +99,7 @@
         login.style.display = "none";
         signup.style.display = "initial";
       });
-      let pagelocation = location.pathname.toLowerCase();
+   </script>
 
-      document.getElementById("pagelocation").innerText += pagelocation;
-    </script>
-
-<%@includes file="includes/footer.jsp" %>
 </body>
 </html>
