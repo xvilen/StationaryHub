@@ -8,10 +8,11 @@
 
  <script src="/javascripts/fontawesome.js"></script>
 
-    <link rel="stylesheet" href="stylesheets/Login.css" />
-    <link rel="stylesheet" href="stylesheets/navbar.css" />
-    <link rel="stylesheet" href="stylesheets/backside.css" />
     <link rel="stylesheet" href="stylesheets/universal.css" />
+    <link rel="stylesheet" href="stylesheets/backside.css" />
+    <link rel="stylesheet" href="stylesheets/navbar.css" />
+    <link rel="stylesheet" href="stylesheets/Login.css" />
+ 
 <title>Login Page</title>
 <%--  <%@include  file="/includes/head.jsp" %>  --%>
 </head>
@@ -37,12 +38,12 @@
             <div class="card">
               <div class="button">
                 <div class="button-cont">
-                  <button class="login-btn">Login</button
-                  ><button class="signup-btn active-btn">Sign Up</button>
+                  <button class="login-btn active-btn">Login</button
+                  ><button class="signup-btn">Sign Up</button>
                 </div>
               </div>
-              <div class="login">
-                <form action="/auth/login" method="post">
+              <div class="login" style="display: initial">
+                <form action="user-login" method="post">
                   <input type="text" placeholder="EMAIL" name="username" />
                   <input
                     type="password"
@@ -52,11 +53,13 @@
                   <button type="submit">Log in</button>
                 </form>
               </div>
-              <div class="signup">
-                <form action="/auth/signup" method="post">
-                  <input type="text" placeholder="NAME" name="name" />
-                  <input type="text" placeholder="EMAIL" name="username" />
-                  <input type="number" placeholder="PHONE NO." name="number" />
+              <div class="signup" style="display: none;">
+                <form action="Sign-up" method="post">
+                  <input type="text" placeholder="FIRST NAME" name="fname" />
+                   <input type="text" placeholder="LAST NAME" name="lname" />
+                  <input type="text" placeholder="EMAIL" name="email" />
+                  <input type="number" placeholder="PHONE NO." name="phnumber" />
+                   <input type="text" placeholder="ADDRESS" name="address" />
                   <input
                     type="password"
                     placeholder="PASSWORD"
