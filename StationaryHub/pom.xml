@@ -4,6 +4,27 @@
   <artifactId>Stationary</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<oracle.version>21.3.0.0</oracle.version>
+	</properties>
+  <dependencies>
+	<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>${oracle.version}</version>
+		</dependency>
+	<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
   <build>
     <plugins>
       <plugin>
@@ -17,6 +38,15 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.3</version>
       </plugin>
+      
+      <plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>3.0.0</version>
+					<configuration>
+						<mainClass>com.training.inventory.App</mainClass>
+					</configuration>
+				</plugin>
     </plugins>
   </build>
 </project>
