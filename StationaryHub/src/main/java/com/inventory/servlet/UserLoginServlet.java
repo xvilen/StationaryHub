@@ -32,7 +32,7 @@ public class UserLoginServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	response.sendRedirect("index.jsp");
+	
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class UserLoginServlet extends HttpServlet {
 			{
 				out.print("user login");
 				request.getSession().setAttribute("auth", user);
-				response.sendRedirect("Home.jsp");
+				response.sendRedirect("index.jsp");
 			}else {
 				out.print("user login failed");
 			}

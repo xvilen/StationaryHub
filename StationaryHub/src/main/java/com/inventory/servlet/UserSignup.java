@@ -52,7 +52,7 @@ public class UserSignup extends HttpServlet {
 			{
 				HttpSession httpSession = request.getSession();
 				httpSession.setAttribute("message", "Signup Successfull");
-				response.sendRedirect("index.jsp");
+				response.sendRedirect("login.jsp");
 			}else {
 				out.print("Not inserted");
 			}
