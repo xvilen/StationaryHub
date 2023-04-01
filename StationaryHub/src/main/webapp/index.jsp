@@ -1,24 +1,25 @@
+<%@page import="com.inventory.dao.ProductDao"%>
+<%@page import="com.inventory.model.Product"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ 
 <!DOCTYPE html>
-<html lang="en">
-  
-<!-- Mirrored from localhost:3000/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Mar 2023 09:31:42 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<html>
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/LandingPage.css" />
+   
 
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href=".//stylesheets//index.css" />
-
+    <link href="./stylesheets/index.css" rel="stylesheet">
+   
     <title>YourChoice</title>
   </head>
-  <body class="flexCenter">
+ <body class="flexCenter">
     <i class="on-off fa-solid fa-toggle-off"></i>
 
     <!-- side nav bar -->
@@ -32,7 +33,7 @@
 
     <div class="navigation">
 <div>
-<a href="profile.jsp" class="item">
+<a href="auth/Login.html" class="item">
 <i class="fa-solid fa-user"></i><h5>profile</h5>
 </a>
 </div>
@@ -42,7 +43,7 @@
 </a>
 </div>
 <div>
-<a class="item" href="auth/Login.html">
+<a class="item" href="CartServlet">
   <i class="fa-solid fa-bag-shopping"></i></i><h5>My Cart</h5>
 </a>
 </div>
@@ -84,10 +85,10 @@
     </h2>
   </div>
   <div class="navMid">
-    <a href="index.html">
+    <a href="/">
       <div class="navitem">Home</div>
     </a>
-    <a href="product.html">
+    <a href="all-products">
       <div class="navitem">Shop</div>
     </a>
     <a href="blog.html">
@@ -159,13 +160,13 @@
                       <a class="icon cursor" href="auth/Login.html">
                         <i class="fa-solid fa-heart"></i>
                       </a>
-                      <h1>Kurta</h1>
-                      <h5>Diaddl Color: Black, Case Shape: Round, Dial Glass Material: Mineral</h5>
+                      <h1>Drafter</h1>
+                     
 
-                      <p>Women,kurta</p>
+                      <p>Engineering Instrument</p>
                       <div class="price">
                         <h2>PRICE :</h2>
-                        <h2>Rs. 1255</h2>
+                        <h2>Rs. 400</h2>
                       </div>
                       <a href="product/singleproduct0818.html?id=62cc7ac1caf52635f99f4e6e">
                         <button class="cursor">
@@ -174,7 +175,7 @@
                       </a>
                     </div>
                     <div class="product-img cursor">
-                      <img src="images/uploads/1657567924011yourchoice4504369700095896women3.jpg" alt="" />
+                      <img src="images/uploads/pencil.jpg" alt="" />
                     </div>
                   </div>
                   
@@ -183,13 +184,13 @@
                       <a class="icon cursor" href="auth/Login.html">
                         <i class="fa-solid fa-heart"></i>
                       </a>
-                      <h1>Sunglass</h1>
+                      <h1>Paint Colours</h1>
                       <h5></h5>
 
-                      <p>Accessories</p>
+                      <p>Art and Craft</p>
                       <div class="price">
                         <h2>PRICE :</h2>
-                        <h2>Rs. 200</h2>
+                        <h2>Rs. 100</h2>
                       </div>
                       <a href="product/singleproduct0deb.html?id=62cbde36e76dfba6233d9b3c">
                         <button class="cursor">
@@ -207,10 +208,10 @@
                       <a class="icon cursor" href="auth/Login.html">
                         <i class="fa-solid fa-heart"></i>
                       </a>
-                      <h1>Tshirt</h1>
-                      <h5>, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline</h5>
+                      <h1>Pencils</h1>
+                     
 
-                      <p>Men,Tshirt</p>
+                      <p>Writing Instruments</p>
                       <div class="price">
                         <h2>PRICE :</h2>
                         <h2>Rs. 399</h2>
@@ -262,11 +263,10 @@
 
               <a
                 class="swiper-slide swiper-slide2"
-                href="productde8d.html?category=Men"
+                href="/Stationary/CategoryWiseServlet?categoryname=writing instruments"
               >
                 <div class="cat-info">
-                  <h1>MENS</h1>
-                  <button>Shop</button>
+                  <h1>Writing Instruments</h1>
                 </div>
                 <img src="images/uploads/1657561202963yourchoice9229602196134266tshirt4.webp" />
               </a>
@@ -278,13 +278,13 @@
               
               <a
                 class="swiper-slide swiper-slide2"
-                href="product995e.html?category=Women"
+                href="/Stationary/CategoryWiseServlet?categoryname=art and craft"
               >
                 <div class="cat-info">
-                  <h1>WOMENS</h1>
-                  <button>Shop</button>
+                  <h1>Art And Craft</h1>
+                
                 </div>
-                <img src="images/uploads/1657567924011yourchoice4504369700095896women3.jpg" />
+                <img src="images/uploads/1657561202963yourchoice9229602196134266tshirt4.webp"  />
               </a>
               
             </div>
@@ -294,13 +294,13 @@
               
               <a
                 class="swiper-slide swiper-slide2"
-                href="product508b.html?category=Accessories"
+                href="/Stationary/CategoryWiseServlet?categoryname=engineering Products"
               >
                 <div class="cat-info">
-                  <h1>Accessories</h1>
-                  <button>Shop</button>
+                  <h1>Engineering Products</h1>
+                  
                 </div>
-                <img src="images/uploads/1657527858415yourchoice8826970721994936sunglasspng4.jpg" />
+                <img src="images/uploads/1657561202963yourchoice9229602196134266tshirt4.webp"  />
               </a>
               
             </div>
@@ -312,8 +312,15 @@
 
         <div class="swiper mySwiper3">
           <div class="swiper-wrapper">
-            
-            <div class="swiper-slide swiper-slide3 product-card">
+           <%
+           ProductDao productdao=new ProductDao();
+           List<Product> productlist=productdao.findLimitedProducts();
+
+           for(Product prod:productlist){
+          
+        	   %>
+        	   
+        	       <div class="swiper-slide swiper-slide3 product-card">
               <div class="nav">
                 <a class="icon" href="auth/Login.html">
                   <i class="fa-solid fa-heart"></i>
@@ -323,7 +330,7 @@
                 </div>
               </div>
               <div class="product">
-                <div
+                <%--<div
                   class="product-background"
                   style="
                     background: rgb(
@@ -334,90 +341,24 @@
                   "
                 >
                   <div class="product-background-circle"></div>
-                </div>
+                </div>--%>
                 <div class="product-image">
-                  <img src="images/uploads/1657567924010yourchoice3052189983817770womenpng.jpg" alt="" />
+                  <img src="images/uploads/pencil.jpg" />
                 </div>
               </div>
               <div class="product-info">
-                <h3>Kurta</h3>
-                <h4>$1255</h4>
-                <a href="product/singleproduct0818.html?id=62cc7ac1caf52635f99f4e6e"
+                <h3><%out.print(prod.getProduct_name());%></h3>
+                <h4><%out.print(prod.getProduct_price());%></h4>
+                <a href="images/uploads/<%out.print(prod.getImage());%>"
                   ><button>view <i class="fa-solid fa-expand"></i></button
                 ></a>
               </div>
             </div>
             
-            <div class="swiper-slide swiper-slide3 product-card">
-              <div class="nav">
-                <a class="icon" href="auth/Login.html">
-                  <i class="fa-solid fa-heart"></i>
-                </a>
-                <div class="icon">
-                  <i class="fa-solid nav-ic fa-bag-shopping"></i>
-                </div>
-              </div>
-              <div class="product">
-                <div
-                  class="product-background"
-                  style="
-                    background: rgb(
-                      58,
-                      176,
-                      98
-                    );
-                  "
-                >
-                  <div class="product-background-circle"></div>
-                </div>
-                <div class="product-image">
-                  <img src="images/uploads/1657561202962yourchoice4744228777935655tshirt1.jpg" alt="" />
-                </div>
-              </div>
-              <div class="product-info">
-                <h3>Tshirt</h3>
-                <h4>$399</h4>
-                <a href="product/singleproduct2785.html?id=62cc6079245ede6f099cfa68"
-                  ><button>view <i class="fa-solid fa-expand"></i></button
-                ></a>
-              </div>
-            </div>
-            
-            <div class="swiper-slide swiper-slide3 product-card">
-              <div class="nav">
-                <a class="icon" href="auth/Login.html">
-                  <i class="fa-solid fa-heart"></i>
-                </a>
-                <div class="icon">
-                  <i class="fa-solid nav-ic fa-bag-shopping"></i>
-                </div>
-              </div>
-              <div class="product">
-                <div
-                  class="product-background"
-                  style="
-                    background: rgb(
-                      138,
-                      145,
-                      244
-                    );
-                  "
-                >
-                  <div class="product-background-circle"></div>
-                </div>
-                <div class="product-image">
-                  <img src="images/uploads/1657527858413yourchoice6314888914517969sunglasspng.jpg" alt="" />
-                </div>
-              </div>
-              <div class="product-info">
-                <h3>Sunglass</h3>
-                <h4>$200</h4>
-                <a href="product/singleproduct0deb.html?id=62cbde36e76dfba6233d9b3c"
-                  ><button>view <i class="fa-solid fa-expand"></i></button
-                ></a>
-              </div>
-            </div>
-            
+        	   <% 
+           }
+           %>
+        
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -501,10 +442,7 @@
 </footer>
 
     </div>
-    <!-- Initialize Swiper -->
-    <script></script>
-  </body>
-
+   
   <script src="https://kit.fontawesome.com/d19408b3b1.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
@@ -567,6 +505,5 @@ var swiper3 = new Swiper(".mySwiper3", {
   },
 });
   </script>
-
+  </body>
 </html>
-    

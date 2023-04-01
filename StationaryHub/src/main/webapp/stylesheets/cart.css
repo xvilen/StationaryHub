@@ -131,150 +131,133 @@ body {
 
 .main-body {
     width: 100%;
-    height: 36%;
-    display: flex;
-  }
-  
-  .main-body .card-body {
-    flex: 12;
-    background: none;
-    position: relative;
-  }
-  .card {
-    width: 100%;
-    height: 200%;
-    position: absolute;
-    bottom: 25px;
-    background: none;
-    border-radius: 50px;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 23px;
-  }
-  .card .checkout-product-cont {
-    box-shadow: inset 0px 0px 16px 4px rgba(255, 255, 255, 1);
-    box-shadow: 5px 18px 22px 4px rgba(0, 0, 0, 0.5);
-    flex: 4;
-    height: 95%;
-    background: #ffebc2;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-    padding: 20px 0px;
-    width: 69vw;
-  }
-  
-  .checkout-product-box {
-    overflow-y: scroll;
-    width: 91%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 0px;
-  }
-  .checkout-product-cont .checkout-product {
-    width: 100%;
-    height: 130px;
-    border-radius: 30px;
-    background: none;
-    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    gap: 17px;
-  }
-  .checkout-product img {
-    width: 195px;
     height: 100%;
-    border-radius: 30px;
-    flex: 2;
-  }
-  .checkout-product .product-colors,
-  .product-size {
     display: flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
   }
-  .color {
-    width: 20px;
-    height: 20px;
+  
+  main.table{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    top: 100px;
+    display: flex;
+    padding: 5px 40px;
+    gap: 15px;
+  }
+  .table_header{
+    width: 100%;
+    height: 10%;
+    padding: .8rem 1rem;
+  }
+  .table_body{
+    width: 70%;
+    height: fit-content;
+    max-height: calc(89% - .8rem);
+    background-color: #ffffff;
+    margin: 0.8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    box-shadow: 0px 0px 10px white;
+  }
+  .table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+
+  }
+  .table_body::-webkit-scrollbar-thumb{
+    border-radius: 0.5rem;
+    background-color: #0004;
+    visibility: hidden;
+  }
+  .table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+  }
+  .table_body table{
+    width: 100%;
+  }
+  td img{
+    width: 75px;
+    height: 75px;
+    margin-right: 0.5rem;
     border-radius: 50%;
+    vertical-align: middle;
   }
-  .size {
-    min-width: 35px;
-    width: max-content;
-    height: 35px;
-    border: 2px solid white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-box-shadow: inset 2px 1px 65px 12px rgba(255, 255, 255, 1);
-    -moz-box-shadow: inset 2px 1px 65px 12px rgba(255, 255, 255, 1);
-    box-shadow: inset 2px 1px 65px 12px rgba(255, 255, 255, 1);
+  table,th,td{
+    padding: 1rem;
+    border-collapse:collapse ;
+
   }
-  .product-quantity {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
+  thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
   }
-  .product-quantity i {
+  tbody{
+    text-align: center;
+  }
+  tbody tr:nth-child(even){
+    background-color: #00000015;
+  }
+  tbody tr:hover{
+    background-color: #ffffffe3;
+  }
+  .quantity{
     font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 17px;
+  }
+  td{
+    font-size: 20px;
+  }
+  i{
     cursor: pointer;
   }
-  .product-quantity div {
-    font-size: 30px;
-    font-family: cursive !important;
-  }
-  .product-price {
-    height: 100%;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    gap: 5px;
-  }
-  .product-price i {
-    font-size: 30px;
-  }
-  
-  .card .checkout-price {
-    flex: 1;
-    height: 95%;
-    background: #ffebc2;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-    box-shadow: inset 0px 0px 16px 4px rgba(255, 255, 255, 1);
-    box-shadow: 5px 18px 22px 4px rgba(0, 0, 0, 0.5);
-  }
-  .checkout-price h4 {
-    font-size: 13px;
-  }
-  .checkout-price div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .checkout-price button {
-    width: 100%;
-    height: 50px;
-    background: black;
-    color: yellow;
-    border-radius: 15px;
-  }
+.checkout-body{
+  width: 30%;
+  height: 50%;
+  padding: 15px;
+  background: white;
+  margin: 0.8rem auto;
+  border-radius: 10%;
+  box-shadow: 0px 0px 10px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.checkoutcard{
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chekoutbtn{
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chekoutbtn button{
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+}
   a {
     text-decoration: none;
     color: inherit;
@@ -373,6 +356,7 @@ body {
     background: none;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   .Landing-Screen .Backside-card-body {
     background: #fdb815;
@@ -381,7 +365,8 @@ body {
     border-radius: 50px;
     margin-top: 20px;
     box-shadow: 0px 0px 15px 1px rgba(253, 145, 30, 1);
-    position: relative;
+    position: absolute;
+    z-index: -12;
     overflow: hidden;
   }
   .Landing-Screen .Backside-card-body::after {
@@ -538,4 +523,4 @@ body {
     font-size: 20px;
   }
         
-  
+    
